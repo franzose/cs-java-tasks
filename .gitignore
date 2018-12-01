@@ -1,5 +1,8 @@
-# Compiled class file
-*.class
+# IDE
+.idea/
+
+# Compiled sources
+out/
 
 # Log file
 *.log
