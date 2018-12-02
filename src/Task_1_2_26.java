@@ -1,8 +1,8 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-class Task_1_2_26 {
-    static void main(String[] args) {
+public class Task_1_2_26 {
+    public static void main(String[] args) {
         if (args.length < 2) {
             return;
         }
@@ -17,25 +17,27 @@ class Task_1_2_26 {
         System.out.println("r: " + r);
         System.out.println("theta: " + theta);
     }
+}
 
-    static class Coordinates {
-        private double x;
-        private double y;
+class Coordinates {
+    private double x;
+    private double y;
 
-        Coordinates(double x, double y) {
-            this.x = x;
-            this.y = y;
-        }
-
-        double getR() {
-            return Math.sqrt(x * x + y * y);
-        }
-
-        double getTheta() {
-            return Math.atan2(y, x);
-        }
+    Coordinates(double x, double y) {
+        this.x = x;
+        this.y = y;
     }
 
+    double getR() {
+        return Math.sqrt(x * x + y * y);
+    }
+
+    double getTheta() {
+        return Math.atan2(y, x);
+    }
+}
+
+class Tests {
     @Test
     void shouldReturnPolarCoordinates() {
         Coordinates coordinates = new Coordinates(2, 0);
