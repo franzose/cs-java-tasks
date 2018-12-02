@@ -1,8 +1,8 @@
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-class Task_1_2_19 {
-    static void main(String[] args) {
+public class Task_1_2_19 {
+    public static void main(String[] args) {
         if (args.length < 2) {
             return;
         }
@@ -12,13 +12,15 @@ class Task_1_2_19 {
 
         System.out.println(new Generator().generate(a, b));
     }
+}
 
-    static class Generator {
-        int generate(int from, int to) {
-            return from + (int) (Math.random() * to + 1);
-        }
+class Generator {
+    int generate(int min, int max) {
+        return min + (int) (Math.random() * (max - min) + 1);
     }
+}
 
+class GeneratorTests {
     @Test
     void testBounds() {
         Generator generator = new Generator();
