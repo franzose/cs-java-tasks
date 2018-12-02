@@ -37,7 +37,7 @@ class Coordinates {
     }
 }
 
-class Tests {
+class Task_1_2_26_Tests {
     @Test
     void shouldReturnPolarCoordinates() {
         Coordinates coordinates = new Coordinates(2, 0);
