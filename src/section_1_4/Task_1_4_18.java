@@ -10,7 +10,7 @@ class Task_1_4_18 {
                 throw new MatrixMultiplicationException("Invalid matrix sizes.");
             }
 
-            int[][] multiplied = new int[first.length][second[0].length];
+            int[][] product = new int[first.length][second[0].length];
             int sum = 0;
 
             for (int i = 0; i < first.length; i++) {
@@ -19,12 +19,12 @@ class Task_1_4_18 {
                         sum += first[i][k] * second[k][j];
                     }
 
-                    multiplied[i][j] = sum;
+                    product[i][j] = sum;
                     sum = 0;
                 }
             }
 
-            return multiplied;
+            return product;
         }
     }
 
